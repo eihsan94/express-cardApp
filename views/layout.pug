@@ -1,0 +1,32 @@
+//- production mode
+doctype html
+html(lang="en")
+  head
+    title Flash Cards
+    link(rel='stylesheet', href='/static/stylesheets/style.css')
+  body
+    include includes/header.pug
+    block main
+//-  block main =>  the name of the block
+
+
+
+// //- development mode
+//- doctype html
+//- html(lang="en")
+//-   head
+//-     title Flash Cards
+//-     link(rel="stylesheet", href="static/stylesheets/style.css")
+//-   body
+//-     include includes/header.pug
+//-     if name
+//-       h2 Welcome, #{name}!
+//-       form(action='/goodbye', method='post')
+//-         button(type='submit') Goodbye
+//-     block content
+//-     include includes/footer.pug
+
+
+//- include includes/header.pug=> include  the html header to the app
+//- include includes/footer.pug=> include  the html footer to the app
+//- link(rel="stylesheet", href="static/stylesheets/style.css") => include the css for the page

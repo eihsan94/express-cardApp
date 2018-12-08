@@ -1,0 +1,24 @@
+extends app
+
+block card
+  section(class=`flashcards`)
+    .card(class=`card-${side}`)
+      .card-header
+      h1.card-title= side
+      #content
+        h2= text
+        if hint
+          p.hint
+            i= hint
+      .card-flip-wrap
+        a(href=`${id}?side=${sideToShow}`)
+          img.card-flip(src='/static/img/flip.svg')
+      .card-next
+        a(href='/cards')
+          img(src="/static/img/next.svg")
+    script(src='/static/js/app.js')
+
+//-  text => variable that will be recieved from routes.js defined in h2 tags 
+//- hint => hint variable  that will be recieved from routes.js
+//- a(href=`${id}?side=${sideToShow}`) => for linking the page to the questions when the answer is being sent and vice versa
+//- sideToShowDisplay => the variable that is being sent from the server 
